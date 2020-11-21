@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign In</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel = "stylesheet" type = "text/css" href = "../bootstrap/css/bootstrap.min.css">
+
+        
+        <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+        <script type = "text/javascript" src = "jquery.min.js"></script>
+        <script type = "text/javascript">
+            $document.ready(function(){
+                showdata();
+
+                $("#btnregister").click(function(){
+                    var firstname = $("#Fname").val();
+                    var lastname = $("#Lname").val();
+                    var age = $("#age").val();
+                    var email = $("#email").val();
+                    var password = $("#password").val();
+                    var phonenumber = $("#number").val();
+                    var gender = $("input[name = 'gender']:checked").val();
+
+                    var customer = {
+                        firstname : firstname,
+                        lastname : lastname,
+                        age : age,
+                        email: email,
+                        password: password,
+                        gender: gender,
+                    }
+
+                    console.log(customer);
+                })
+            })
+        
+        
+        
+        
+        </script>
+    </head>
+    <body>
+
+        <form class="text-center border border-light p-5" action="#!">
+
+            <h3 class = "my-4">Register</h3>
+
+            <div class="form-row">
+                <div class="col-lg-6 p-2">
+                    <!-- FirstName -->
+                    <input type="text" name = "Fname" id="Fname" class="form-control" placeholder="First Name">
+                </div>
+                <div class="col-lg-6 p-2">
+                    <!--LastName-->
+                    <input type = "text" name = "Lname" id = "Lname" class = "form-control" placeholder = "Last Name">
+                </div>
+            </div>
+
+            <div class = "p-2 col-lg-12">
+                <!--age-->
+                <input type = "text" name = "" id = "age" class = "form-control" placeholder="Age">
+            </div>
+
+            <div class = "p-2 col-lg-12">
+            <!-- E-mail -->
+                <input type="email" name = "email" id="email" class="form-control" placeholder="E-mail">
+            </div>
+
+            <div class = "p-2 col-lg-12">
+            <!--Password-->
+                <input type = "text" name = "Password" id = "password" class = "form-control" placeholder = "Password">
+                <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted">
+                    At least 8 characters and 1 digit
+                </small>
+            </div>
+
+            <div class = "p-2 col-lg-12">
+                <!--phone number-->
+                <input type = "text" name = "Phone" id = "number" class = "form-control" placeholder="Phone Number">
+                <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted">
+                    Optional - for two step authentication
+                </small>
+            </div>
+
+            <div>
+                <!-- Subject -->
+                <label>Gender</label>
+                <select class="browser-default custom-select mb-4">
+                    <option value="" disabled>Choose option</option>
+                    
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    
+                </select>
+            </div>
+
+            <!-- Send button -->
+            <button class="btn btn-info btn-block" id = "btnregister" type="submit">Register</button>
+
+
+            
+        </form>
+
+        <script type="text/javascript" src="../bootstrap/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
